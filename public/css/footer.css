@@ -1,0 +1,40 @@
+/* footer */
+
+
+
+.footer {
+  margin-top: 120px;
+  background-color: #FFFFFF ;
+  color: #152C5B;
+  height: 300px;
+  padding: 40px;
+}
+
+.footer-logo img{
+  float: left;
+  border-radius: 30px;
+  width: 120px;
+  height: 120px;
+
+}
+
+.footer-nav{
+  float: left;
+  padding-bottom: 20px;
+  margin-left: 80px;
+}
+
+.footer-nav li{
+  list-style: none;
+}
+
+.social {
+  font-size: 20px;
+  padding-right: 10px;
+  margin: 5px;
+  color: black;
+}
+.judul {
+  font-weight: bold;
+  font-size: 24px;
+}

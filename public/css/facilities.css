@@ -1,0 +1,197 @@
+/*kelola */
+.namapage{
+  margin-left: 50px;
+  margin-top: 80px;
+  font-size: 12px;
+  color: #808080;
+  cursor: pointer;
+}
+
+.namapage p{
+  float: left;
+}
+
+.namapage a {
+  margin-left: 10px;
+  color:  #3252DF;
+}
+.kelolaroom{
+  margin: 70px;
+  position: relative;
+  margin-bottom: 120px;
+}
+.kelolaroom h2 {
+  left: 200px;
+  top: 120px;
+  font-size: 70px;
+  color: #F2994A;
+}
+
+.kelola{
+  width: 40%;
+  float: left;
+  margin-left: 30px;
+  margin-right: 40px;
+  padding: 30px;
+}
+
+.kelola img {
+  width: 1000px;
+  height: 500px; 
+  border-radius: 30px;
+}
+
+
+.textjudul{
+  color: #152C5B;
+  position: absolute;
+  font-size: 30px;
+  left: 200px;
+  top: 90px;
+}
+
+
+.btn1 {
+  cursor: pointer;
+  padding: 20px 40px;
+  border: 2px ;
+  border-radius: 50px;
+  color: black;
+  margin-top: 20px;
+  background: #FFFFFF;
+  color: #152C5B;
+  position: absolute;
+  font-size: 24px;
+  left: 440px;
+  top: 360px;
+}
+
+.btn1:hover{
+  background-color: #152C5B;
+  color: #FFFFFF;
+}
+
+
+/* category */
+
+
+.section-tittle {
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  padding-bottom: 15px;
+  margin-top: 460px;
+  margin-left: 120px;
+  width: 80%;
+  text-align: center; 
+}
+
+
+.catdetails{
+  margin-top: 40px;
+  margin-left: 40px;
+  position: relative;
+}
+
+.kirisatu, .kanandua{
+  width: 40%;
+  float: left;
+  margin-left: 30px;
+  margin-right: 40px;
+  padding: 30px;
+}
+
+.kirisatu img,.kanandua img{
+  width: 590px;
+  height: 429px; 
+  border-radius: 30px;
+}
+
+.kanandua img {
+  margin-left: -5px;
+}
+.kanansatu{
+  width: 40%;
+  float: left;
+  margin-left: 30px;
+  margin-right: 40px;
+  padding: 30px;
+}
+
+.kanansatu p, .kiridua p, .tigadua p{
+  margin-left: 80px;
+  width: 429px;
+  height: 429px;
+  border-radius: 30px;
+  background-color: #366536;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 80px;
+  
+}
+
+.kiridua p{
+  position: absolute;
+  top: 500px;
+  left: -20px;
+  padding-top: 70px;
+}
+
+.kanandua {
+  margin-left: -45px;
+  margin-top: -20px;
+}
+
+
+.tigadua p{
+  position: absolute;
+  top: 1465px;
+  margin-left: 70px;
+}
+
+.strong{
+  font-size: 24px;
+  color: #F2994A;
+}
+/* equipment */
+
+
+.section-tittle2 {
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  padding-bottom: 15px;
+  margin-left: 120px;
+  width: 80%;
+  text-align: center;
+
+}
+
+.equipment {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+}
+
+.equipment > div {
+  display: flex;
+  padding-left: 120px;
+  padding-top: 40px;
+}
+
+.equipment i {
+  font-size: 18px;
+  color: #F2994A;
+   
+}
+.equipment li{
+  padding: 10px;
+  color: #152C5B;
+}
+
+.jdl{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* footer */
+

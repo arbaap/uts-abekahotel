@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  quotes: none;
+  text-decoration: unset;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: 0px auto;
+  overflow-x: hidden;
+
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+
+
+/* header */
+
+header {
+  height: 8vh;
+}
+
+.logo img {
+  float: left;
+  width: 80px;
+  border-radius: 20px;
+}
+
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.keranjang {
+  padding: 20px;
+  background-color: #366536;
+  color: #FFFFFF;
+  border-radius: 20px 15px 30px 5px;
+}
+.keranjang:hover{
+  box-shadow: 0px 35px 120px -17px #E74C3C;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul li {
+  margin-left: 3rem;
+}
+
+header ul li a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #152C5B;
+  transition: 0.5s;
+}
+
+
+li.dropdown {
+     display: inline-block;
+	}
+
+	.dropdown:hover .isi-dropdown {
+		display: block;
+	}
+ 
+	.isi-dropdown {
+		position: absolute;
+		display: none;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		background-color: transparent;
+	}
+
+
+  .namapage a:hover {
+    background-color: #152C5B;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+  
+  }
+ 

@@ -1,0 +1,169 @@
+
+
+/*kelola */
+
+.namapage{
+  margin-left: 50px;
+  margin-top: 80px;
+  font-size: 12px;
+  color: #808080;
+  cursor: pointer;
+}
+
+.namapage p{
+  float: left;
+}
+
+.namapage a {
+  margin-left: 10px;
+  color:  #3252DF;
+}
+
+.kelolaroom{
+  margin: 70px;
+  position: relative;
+  margin-bottom: 120px;
+}
+.kelolaroom h2 {
+  left: 200px;
+  top: 120px;
+  font-size: 70px;
+  color: #F2994A;
+}
+
+.kelola{
+  width: 40%;
+  float: left;
+  margin-left: 30px;
+  margin-right: 40px;
+  padding: 30px;
+}
+
+.kelola img {
+  width: 1000px;
+  height: 500px; 
+  border-radius: 30px;
+}
+
+
+.textjudul{
+  color: #152C5B;
+  position: absolute;
+  font-size: 30px;
+  left: 200px;
+  top: 90px;
+}
+
+
+.btn1 {
+  cursor: pointer;
+  padding: 20px 40px;
+  border: 2px ;
+  border-radius: 50px;
+  color: black;
+  margin-top: 20px;
+  background: #FFFFFF;
+  color: #152C5B;
+  position: absolute;
+  font-size: 24px;
+  left: 440px;
+  top: 360px;
+}
+
+.btn1:hover{
+  background-color: #152C5B;
+  color: #FFFFFF;
+}
+
+
+/* category */
+
+
+.section-tittle {
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  padding-bottom: 15px;
+  margin-top: 460px;
+  margin-left: 120px;
+  width: 82%;
+}
+
+.catdetails{
+  margin-top: 40px;
+  margin-left: 40px;
+  position: relative;
+}
+
+.kirisatu,.kanandua{
+  width: 40%;
+  float: left;
+  margin-left: 30px;
+  margin-right: 40px;
+  padding: 30px;
+}
+
+.kirisatu img, .kanandua img {
+  width: 590px;
+  height: 429px; 
+  border-radius: 30px;
+}
+
+.kanansatu,.kiridua{
+  width: 40%;
+  float: left;
+  margin-left: 30px;
+  margin-right: 40px;
+  padding: 30px;
+}
+
+.kanansatu img {
+  width: 459px;
+  height: 429px; 
+  border-radius: 30px;
+  margin-left: 70px;
+}
+
+.kanansatu p ,.btncate{
+  margin-left: 80px;
+}
+
+.kiridua img {
+  width: 459px;
+  height: 429px; 
+  border-radius: 30px;
+}
+.kiridua, .kanandua{
+  margin-left: 70px;
+}
+
+.kanandua {
+  margin-left: -40px;
+}
+
+.tigatengah {
+  margin-left: 100px;
+}
+.tigatengah img {
+  border-radius: 30px;
+  width:1100px;
+  height: 566px;
+}
+
+.btncat,.btncate {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px ;
+  border-radius: 30px;
+  color: black;
+  margin-top: 10px;
+  background: #152C5B;
+  color: #FFFFFF;
+  font-size: 14px;
+
+}
+
+.btncat:hover, .btncate:hover{
+  color: #152C5B;
+  background-color: #FFFFFF;
+}
+

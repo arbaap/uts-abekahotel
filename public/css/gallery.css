@@ -1,0 +1,96 @@
+/* gallery */
+
+.namapage{
+  margin-left: 120px;
+  margin-top: 80px;
+  font-size: 12px;
+  color: #808080;
+  cursor: pointer;
+}
+
+.namapage p{
+  float: left;
+}
+
+.namapage a {
+  margin-left: 10px;
+  color:  #3252DF;
+}
+.section-tittle {
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  padding-bottom: 15px;
+  margin-top: 40px;
+  margin-left: 120px;
+  width: 82%;
+}
+
+.catdetails{
+  margin-top: 40px;
+  margin-left: 40px;
+  position: relative;
+}
+
+.kirisatu,.kanandua{
+  width: 40%;
+  float: left;
+  margin-left: 30px;
+  margin-right: 40px;
+  padding: 30px;
+}
+
+.kirisatu img, .kanandua img {
+  width: 590px;
+  height: 429px; 
+  border-radius: 30px;
+}
+
+.kanansatu,.kiridua{
+  width: 40%;
+  float: left;
+  margin-left: 30px;
+  margin-right: 40px;
+  padding: 30px;
+}
+
+.kanansatu img {
+  width: 459px;
+  height: 429px; 
+  border-radius: 30px;
+  margin-left: 70px;
+}
+
+
+.kiridua img {
+  width: 459px;
+  height: 429px; 
+  border-radius: 30px;
+}
+.kiridua, .kanandua{
+  margin-left: 20px;
+}
+
+.kanandua {
+  margin-left: -20px;
+}
+
+.tigatengah {
+  margin-left: 70px;
+}
+.tigatengah img {
+  border-radius: 30px;
+  width:1040px;
+  height: 566px;
+}
+
+.button-tittle {
+  cursor: pointer;
+  padding: 20px 20px;
+  font-size: 28px;
+  border-radius: 30px;
+  margin-top: 80px;
+  margin-left: 120px;
+  width: 82%;
+  color: #FFFFFF;
+  background-color: #219653;
+}

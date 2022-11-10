@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/homepage.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <title>Homepage</title>
+</head>
+<body>
+ <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="/homepage" class="logo"> <img src="./img/logo.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="/homepage" class="nav-link">Home</a> </li>
+          <li class="dropdown"><a href="/category">Category</a>
+            <ul class="isi-dropdown">
+              <li><a href="/rooms" class="nav-link">Rooms</a></li>
+              <li><a href="/gallery" class="nav-link">Gallery</a></li>
+            </ul>
+          </li>
+          <li> <a href="/facilities" class="nav-link">Facilities</a> </li>
+          <li> <a href="/booking1" class="keranjang">+ Book Now</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="namapage">
+      <p  onclick="kembali()">Abeka Hotel /</p> 
+      <a href="#abekahotel"> Homepage</a>
+        <script>
+            function kembali() {
+                window.history.back();
+            }
+        </script>
+  </div>
+  
+    <div class="lesson-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h1>Abeka Hotel's</h1>
+        </div>
+        <div class="lessons">
+          <div class="lesson">
+             <p class="text-contents">Abeka Hotel Memeberikan kenyamanan tempat istirahat bagi semua para pengunjung dengan fasilitas terbaik di dunia. </p>
+          <a href="#abekahotel"><button class="btn1">MORE INFO</button></a>
+        </div>
+          </div>
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="../img/motor.png" class="motor">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+
+    <div class="container">
+        <div class="content-slide">
+            <div class="imgslide">
+                <img class="slider" src="./img/2.png" alt="">
+            </div>
+
+            <div class="imgslide">
+                <img class="slider" src="./img/3.png" alt="">
+            </div>
+
+            <div class="imgslide">
+                <img class="slider" src="./img/4.png" alt="">
+            </div>
+            <div class="imgslide">
+                <img class="slider" src="./img/1.png  " alt="">
+            </div>
+            
+            <a class="prev" onClick="nextslide(-1)">&#10094;</a>
+            <a class="next" onClick="nextslide(1)">&#10095;</a> 
+        </div>
+        </div>
+          
+        <div class="page">
+            <span class="dot" onClick="dotslide(1)"></span>
+            <span class="dot" onClick="dotslide(2)"></span>
+            <span class="dot" onClick="dotslide(3)"></span>
+            <span class="dot" onClick="dotslide(4)"></span>
+            <a href="/gallery"><button class="btnshow">Show Me Now</button></a>
+        </div>
+        
+    </div>
+
+    <script>
+        var slideIndex = 1;
+            showSlide(slideIndex);
+
+        function nextslide(n){
+            showSlide(slideIndex += n);
+        }
+
+        function dotslide(n){
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            var i;
+            var slides = document.getElementsByClassName("imgslide");
+            var dot = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                
+                dot[i].className = dot[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            dot[slideIndex - 1].className += " active";
+            
+        }
+    </script>
+
+      <div class="catdetails" id="abekahotel">
+        <div class="kiri">
+          <img src="./img/9.png">
+          <h1 class="category">Category</h1>
+          <a href="/category"><button href="" class="btncategory">DETAILS</button></a>
+ 
+        </div>
+        <div class="kanan">
+          <img src="./img/10.png">
+          <h1 class="facilities">Facilities</h1>
+          <a href="/gallery"><button href="" class="btnfacilities">DETAILS</button> </a>
+        </div>
+      </div>
+      
+      
+
+
+      <div class="desc">
+          <h3 class="section-tittle">Rating</h3>
+      </div>
+
+      <div class="gallery">
+        <a href="/rooms#standartwin">
+          <img src="./img/2.png" alt=""  >
+        </a>
+        <div class="desc">Standar Twin</div>
+        <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star checked"></i>
+              </div>
+      </div>
+      <div class="gallery">
+        <a href="rooms.html#standardouble">
+          <img src="./img/1.png" alt="" >
+        </a>
+        <div class="desc">Standar Double</div>
+        <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+              </div>
+      </div>
+      <div class="gallery">
+        <a href="rooms.html#deluxe">
+          <img src="./img/9.png" alt="" >
+        </a>
+        <div class="desc">Deluxe</div>
+        <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star checked"></i>
+              </div>
+      </div>
+      <div class="gallery">
+        <a href="rooms.html#family">
+          <img src="./img/10.png" alt="" >
+        </a>
+        <div class="desc">Family</div>
+        <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star checked"></i>
+              </div>
+      </div>
+
+      
+
+    <div class="location">
+      <h1 id="location">Location Info</h1>
+      <br><i class="fas fa-map-marker-alt"></i>
+            <span>Jalan Sumur Bandung No. 7, Dago, Dago, Bandung, Jawa Barat, Indonesia, 40132</span>
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15844.16144715868!2d107.6124228!3d-6.885769!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x39a9f4ec155f3841!2sKalya%20Hotel%20Bandung!5e0!3m2!1sid!2sid!4v1667022402471!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+  </div>
+
+  
+    
+  <div class="wrapper">
+    <div class="box a">
+      <h1>Mimiti Coffe</h1>
+      <h2><i class='fas fa-coffee' style='font-size:18px;color:red'></i> Cafe</h2>
+    </div>
+    <div class="box b">
+      <h1>Curug Dago</h1>
+      <h2><i class='fas fa-mountain' style='font-size:18px;color:red'></i> Nature</h2>
+    </div>
+  </div>
+  <br><br>
+  <div class="wrapper">
+    <div class="box a">
+      <h1>Post Bandung Office</h1>
+      <h2><i class='fas fa-briefcase' style='font-size:18px;color:red'></i> Bussines</h2>
+    </div>
+    <div class="box b">
+      <h1>Trans Studio Bandung</h1>
+      <h2><i class='fas fa-play' style='font-size:18px;color:red'></i> Activities & Games</h2>
+    </div>
+  </div>
+  <br><br>
+  <div class="wrapper">
+    <div class="box a">
+      <h1>Forest Walk Babakan Siliwangi</h1>
+      <h2><i class='fas fa-mountain' style='font-size:18px;color:red'></i> Parks & Zoos</h2>
+    </div>
+    <div class="box b">
+      <h1>Farm House Lembang</h1>
+      <h2><i class='fas fa-mountain' style='font-size:18px;color:red'></i> Nature</h2>
+    </div>
+  </div>
+  <br><br>
+  <div class="wrapper">
+    <div class="box a">
+      <h1>Alfamart Dipatiukur</h1>
+      <h2><i class='fas fa-shopping-cart' style='font-size:18px;color:red'></i> Shops & Gifts</h2>
+    </div>
+    <div class="box b">
+      <h1>Maribaya Waterfall</h1>
+      <h2><i class='fa fa-mountain' style='font-size:18px;color:red'></i> Nature</h2>
+    </div>
+  </div>
+  <br><br><br>
+ 
+
+  <div class="footer">
+    <div class="footer-logo"><img src="./img/logo.png" alt=""></div>
+    <div class="footer-nav">
+      <ul>
+        <li class="judul">Location</li>
+        <li>Jl. Sumur Bandung No.7 Lebak Siliwangi,<br>Coblong Kota Bandung,<br>Jawa Barat 40132</li>
+        <li>Tel: +62 (022) 2518998<br>Email: abekastaycation@gmail.com</li>
+      </ul>
+    </div>  
+    <div class="footer-nav">
+      <ul>
+        <li class="judul">Follow</li>
+        <li><a  class="social" href=""><span class="fab fa-facebook"></span></a></i> Facebook</li>
+        <li><a  class="social" href=""><span class="fab fa-twitter"></span></a></i> Twitter</li>
+        <li><a  class="social" href=""><span class="fab fa-instagram"></span></a></i> Instagram</li>
+        
+        
+      </ul>
+    </div> 
+    <div class="footer-nav">
+      <ul>
+        <li class="judul">Connect Us</li>
+        <li>abekastaycation@gmail.com</li>
+        <li>069-69-6969-69</li>
+        <li>Staycation, Bandung, Jakarta</li>
+      </ul>
+    </div>
+   </div>
+
+</body>
+</html>

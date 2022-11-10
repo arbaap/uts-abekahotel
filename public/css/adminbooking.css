@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+.namapage{
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 80px;
+  font-size: 12px;
+  color: #808080;
+  cursor: pointer;
+}
+
+.namapage p{
+  float: left;
+}
+
+.namapage a {
+  margin-left: 10px;
+  color:  #3252DF;
+}
+.namadashboard {
+  margin-top: 120px;
+  padding: 20px;
+  background-color: #152C5B;
+  color: #FFFFFF;
+  border-radius: 30px;
+  text-align: center;
+}
+
+
+
+.card {
+  margin-top: 120px;
+}
+
+.pengunjung {
+  padding: 20px;
+   background-color: #366536;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 100px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}

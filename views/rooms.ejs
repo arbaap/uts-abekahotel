@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/rooms.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
+  <title>Rooms</title>
+</head>
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="/homepage" class="logo"> <img src="./img/logo.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="/homepage" class="nav-link">Home</a> </li>
+          <li class="dropdown"><a href="/category">Category</a>
+            <ul class="isi-dropdown">
+              <li><a href="/rooms" class="nav-link">Rooms</a></li>
+              <li><a href="/gallery" class="nav-link">Gallery</a></li>
+            </ul>
+          </li>
+          <li> <a href="/facilities" class="nav-link">Facilities</a> </li>
+          <li> <a href="/booking1" class="keranjang">+ Book Now</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+      
+  <div class="namapage">
+      <p  onclick="kembali()">Abeka Hotel /</p> 
+      <a href="#deluxe"> Rooms</a>
+        <script>
+            function kembali() {
+                window.history.back();
+            }
+        </script>
+  </div>
+      <section class="kelolaroom">
+        <div class="kelola">
+          <img src="./img/kelola.jpg">
+          <h1 class="textjudul">Welcome To</h1>
+          <h2 class="textjudul">Abeka <br> Hotel's</h2>
+          <a href="#deluxe"><button class="btn1">Show Me Now</button></a>
+          
+        </div>
+      </section>
+      
+      <br><br><br>
+      
+      <div class="desc">
+          <h3 id="standartwin" class="section-tittle">Standar Twin</h3>
+
+      <div class="catdetails">
+        <div class="kirisatu">
+          <img src="./img/11.png" href="#">
+          <p>Available Now</p>
+          <a href="/detail1"><button class="btncategory">BOOK NOW</button></a>
+          
+        </div>
+        <div class="kanansatu">
+          <img src="./img/5.png">
+          <p>ROOM FEATURES</p>
+          <ul>
+            <li>1. Air Conditioning</li>
+            <li>2. Television</li>
+            <li>3. In-room-safe</li>
+            <li>4. Ironing Facility</li>
+            <li>5. Complimentary bottled water</li>
+            <li>6. Desk</li>
+            <li>7. Blackout drapes / curtanis</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="desc">
+          <h3 id="standardouble"class="section-tittle">Standar Double</h3>
+
+      <div class="catdetails">
+        <div class="kirisatu">
+          <img src="./img/3.png" href="#">
+          <p class="isiteks">Occupied</p>
+          <a href="#deluxe"><button class="btncategory" onclick="kamarpenuh()">BOOK NOW</button></a>
+          <script> 
+            function kamarpenuh() { 
+            swal("Kamar Penuh!!", "Tolong Pilih Kamar Yang Lain..!", "info"); 
+            } 
+          </script> 
+
+        </div>
+        <div class="kanansatu">
+          <img src="./img/6.png">
+          <p>ROOM FEATURES</p>
+          <ul>
+            <li>1. Equipped with 40" LCD TV</li>
+            <li>2. IDD Telephone</li>
+            <li>3. Coffee & Tea Facility</li>
+            <li>4. Safety Deposit Box</li>
+            <li>5. Hairdryer</li>
+            <li>6. Daily Mineral Water</li>
+            <li>7. Complimentary Wifi </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="desc">
+          <h3 id="family" class="section-tittle">Family</h3>
+
+      <div class="catdetails">
+        <div class="kirisatu">
+          <img src="./img/double.jpg" href="#">
+          <p class="isiteks">Occupied</p>
+          <a href="#deluxe"><button class="btncategory" onclick="kamarpenuh()">BOOK NOW</button></a>
+          <script> 
+            function kamarpenuh() { 
+            swal("Kamar Penuh!!", "Tolong Pilih Kamar Yang Lain..!", "info"); 
+            } 
+          </script>
+        </div>
+        <div class="kanansatu">
+          <img src="./img/double2.jpg">
+          <p>ROOM FEATURES</p>
+          <ul>
+            <li>1. Equipped with 40" LCD TV</li>
+            <li>2. IDD Telephone</li>
+            <li>3. Coffee & Tea Facility</li>
+            <li>4. Safety Deposit Box</li>
+            <li>5. Hairdryer</li>
+            <li>6. Daily Mineral Water</li>
+            <li>7. Complimentary Wifi </li>
+          </ul>
+        </div>
+      </div>
+
+      
+      
+
+      <div class="desc">
+          <h3 id="deluxe" class="section-tittle" id="deluxe">Deluxe</h3>
+
+      <div class="catdetails">
+        <div class="kirisatu">
+          <img src="./img/9.png" href="#">
+          <p>Available Now</p>
+          <a href="/detail1"><button class="btncategory">BOOK NOW</button></a>
+        </div>
+        <div class="kanansatu">
+          <img src="./img/9.jpg">
+          <p>ROOM FEATURES</p>
+          <ul>
+            <li>1. Air Conditioning</li>
+            <li>2. Television</li>
+            <li>3. Safety Deposit Box</li>
+            <li>4. Hairdryer</li>
+            <li>5. Daily Mineral Water</li>
+            <li>6. Complimentary Wifi </li>
+            <li>7. Blackout drapes / curtanis</li>
+          </ul>
+        </div>
+      </div>
+    <div class="desc">
+          <h3 class="section-tittle">Abeka Hotel Rooms</h3>
+      </div>
+
+    <div class="footer">
+    <div class="footer-logo"><img src="./img/logo.png" alt=""></div>
+    <div class="footer-nav">
+      <ul>
+        <li class="judul">Location</li>
+        <li>Jl. Sumur Bandung No.7 Lebak Siliwangi,<br>Coblong Kota Bandung,<br>Jawa Barat 40132</li>
+        <li>Tel: +62 (022) 2518998<br>Email: abekastaycation@gmail.com</li>
+      </ul>
+    </div>  
+    <div class="footer-nav">
+      <ul>
+        <li class="judul">Follow</li>
+        <li><a  class="social" href=""><span class="fab fa-facebook"></span></a></i> Facebook</li>
+        <li><a  class="social" href=""><span class="fab fa-twitter"></span></a></i> Twitter</li>
+        <li><a  class="social" href=""><span class="fab fa-instagram"></span></a></i> Instagram</li>
+        
+        
+      </ul>
+    </div> 
+    <div class="footer-nav">
+      <ul>
+        <li class="judul">Connect Us</li>
+        <li>abekastaycation@gmail.com</li>
+        <li>069-69-6969-69</li>
+        <li>Staycation, Bandung, Jakarta</li>
+      </ul>
+    </div>
+   </div>
+    
+
+      
+
+      
+        
+
+       
+
+       
+        
+
+         
+
+       
+
+
+       
+
+
+    
+  
+
+</body>
+</html>

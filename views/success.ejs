@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/succes.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>Success</title>
+</head>
+<body>
+   <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="/homepage" class="logo"> <img src="./img/logo.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="/homepage" class="nav-link">Home</a> </li>
+          <li class="dropdown"><a href="/category">Category</a>
+            <ul class="isi-dropdown">
+              <li><a href="/rooms" class="nav-link">Rooms</a></li>
+              <li><a href="/gallery" class="nav-link">Gallery</a></li>
+            </ul>
+          </li>
+          <li> <a href="/facilities" class="nav-link">Facilities</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="lesson-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h1>Abeka Hotel's</h1>
+        </div>
+        
+    <div class="mainscreen">
+      <div class="card">
+        <div class="leftside">
+          <a> <img class="product" src="./img/ceklis.png" alt=""></a>>
+        </div>
+        
+        <div class="rightside" id="payment">
+          <form action="">
+            <h1>Payment Sucessfull</h1>
+            <p>First Name</p>
+            <input type="text" class="inputbox" placeholder="Fer D"/>
+            <p>Address</p>
+            <input type="text" class="inputbox"  id="card_number" placeholder="UIN BANDUNG"/>
+            <p>Email Address</p>
+            <input type="text" class="inputbox"  id="card_number" placeholder="dSams@gmail.com" />
+            <p>Phone Number</p>
+            <input type="number" class="inputbox"  id="card_number" placeholder="088923121xx"/>
+            <p>Bukti Pembayaran</p>
+            <input type="text" class="inputbox" />
+            <p></p>
+          </form>
+        </div>
+      </div>
+      <button class="button" onclick="succes()">Selesai</button>
+          <script> 
+            function succes() { 
+            swal("Pembayaran Berhasil", "Terimakasih Telah Menginap di Abeka Hotel", "success"); 
+            } 
+          </script>
+      </div>
+      
+         
+   
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<link rel="stylesheet" href="./css/adminbooking.css">
+<link rel="stylesheet" href="./css/header.css">
+<title>Admin Booking</title>
+</head>
+<body>
+ <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="/" class="logo"> <img src="./img/logo.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="/admin" class="nav-link">Kategori</a> </li>
+          <li> <a href="/adminbooking" class="nav-link">Data Pengunjung</a> </li>
+          <li> <a href="/" class="nav-link">Rating</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="namapage">
+      <p  onclick="kembali()">Abeka Hotel /</p> 
+      <a href="/dashboard"> Dashboard</a>
+        <script>
+            function kembali() {
+                window.history.back();
+            }
+        </script>
+  </div>
+  <div class="container">
+    <h1 class="namadashboard">Abeka Hotel's</h1>
+  </div>
+
+
+  <div class="card border-0 shadow rounded">
+    <div class="card-body">
+      <h1 class="pengunjung">Data Pengunjung</h1>
+        <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th scope="col">NO.</th>
+          <th scope="col">Nama</th>
+          <th scope="col">Alamat</th>
+          <th scope="col">Email</th>
+          <th scope="col">No Telepon</th>
+          <th scope="col">Jumlah Hari</th>
+          <th scope="col">AKSI</th>
+          </tr>
+        </thead>
+      <tbody>
+        <% for (let i=0; i < booking.length; i++){%>
+        <tr>
+            <th scope="row" class="text-center"><%= booking[i].id_booking%></th>
+            <td><%= booking[i].nama_booking%></td>
+            <td><%= booking[i].alamat_booking%></td>
+            <td><%= booking[i].email_booking%></td>
+            <td><%= booking[i].notelp_booking%></td>
+            <td><%= booking[i].jumlah_hari%></td>
+            
+            <td class="text-center">
+                <a onclick="return alert('Are You sure?')" href="/adminbooking/<%=booking[i].id_booking%>" class="btn btn-sm btn-danger">HAPUS</a>
+            </td>
+        </tr>
+        <% }%>
+
+      </tbody>
+      </table>  
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
+  
+
+<br><br><br><br><br><br><br><br><br>
+
+
+</body>
+</html>

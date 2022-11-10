@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/detail1.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        
+  <title>Detail Kamar 1</title>
+</head>
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="/homepage" class="logo"> <img src="./img/logo.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="/homepage" class="nav-link">Home</a> </li>
+          <li class="dropdown"><a href="/category">Category</a>
+            <ul class="isi-dropdown">
+              <li><a href="/rooms" class="nav-link">Rooms</a></li>
+              <li><a href="/gallery" class="nav-link">Gallery</a></li>
+            </ul>
+          </li>
+          <li> <a href="/facilities" class="nav-link">Facilities</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+      
+      <section class="kelolaroom">
+        <div class="namapage">
+      <p  onclick="kembali()">Abeka Hotel /</p> 
+      <a href="#day"> Detail Kamar</a>
+        <script>
+            function kembali() {
+                window.history.back();
+            }
+        </script>
+      </div>
+        <div class="kelola">
+          <img src="./img/kelola.jpg">
+          <h1 class="textjudul">Welcome To</h1>
+          <h2 class="textjudul">Abeka <br> Hotel's</h2>
+          <button href="#"class="btn1">Show Me Now</button></div>
+      </section>
+      
+      <br><br><br>
+      
+      <div class="desc">
+          <h3 class="section-tittle">Standar Twin</h3>
+      </div>
+      
+
+      <div class="catdetails">
+        <div class="kirisatu">
+          <img src="./img/2.png" href="#">
+        </div>
+        <div class="kanansatu">
+          <p>Room Overview</p>
+          <ul>
+            <li>Room Size 18.0 sqm, Bed Type 2 Single bed, Twin Bed Room Additional breakfast are chargeable</li>
+            <li><br><br><strong>Rp. 450.000</strong> per night</li>
+          </ul>
+        </div>
+        </div>
+        
+        
+
+
+        <div class="container">
+        <div class="content-slide">
+            <div class="imgslide">
+                <img class="slider" src="./img/2.png" alt="">
+            </div>
+
+            <div class="imgslide">
+                <img class="slider" src="./img/3.png" alt="">
+            </div>
+
+            <div class="imgslide">
+                <img class="slider" src="./img/4.png" alt="">
+            </div>
+            <div class="imgslide">
+                <img class="slider" src="./img/1.png  " alt="">
+            </div>
+            
+            <a class="prev" onClick="nextslide(-1)">&#10094;</a>
+            <a class="next" onClick="nextslide(1)">&#10095;</a> 
+        </div>
+        </div>
+          
+        <div class="page">
+            <span class="dot" onClick="dotslide(1)"></span>
+            <span class="dot" onClick="dotslide(2)"></span>
+            <span class="dot" onClick="dotslide(3)"></span>
+            <span class="dot" onClick="dotslide(4)"></span>
+        </div>
+        <br><br>
+        
+        <div class ="day" id="day">
+          <h3>How long you will stay ?</h3>
+          <button class= "minus" id= "kurang"> - </button>
+                <button class= "plus" id= "tambah"> + </button>
+                <div class="how">
+                  : <span class= "how" id= "hasil"> </span> days
+                </div>
+              </div>
+              <a href="/booking1"><button class="btnshow">Book Now</button></a> 
+        </div>
+
+        <!-- Bebas alusna kumaha ie dek make how long atau hente -->
+        
+        <div class="avail">
+          <h3 class="tittle">Rooms Available at Abeka Hotel</h3>
+      </div>
+
+      <div class="gallery">
+        <a href="">
+          <img src="./img/2.png" alt="" >
+        </a>
+        <div class="desc">Standar Twin</div>
+        <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star checked"></i>
+              </div>
+      </div>
+      <div class="gallery">
+        <a href="">
+          <img src="./img/1.png" alt="" >
+        </a>
+        <div class="desc">Standar Double</div>
+        <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star checked"></i>
+                <i class="fa fa-star checked"></i>
+              </div>
+      </div>
+      <div class="gallery">
+        <a href="">
+          <img src="./img/9.png" alt="" >
+        </a>
+        <div class="desc">Deluxe</div>
+        <div class="rate flex">
+                <p class="available">Available Now</p>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star checked"></i>
+              </div>
+      </div>
+      <div class="gallery">
+        <a href="">
+          <img src="./img/10.png" alt="" >
+        </a>
+        <div class="desc">Family</div>
+        <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star checked"></i>
+              </div>
+      </div>
+
+    <script>
+        var slideIndex = 1;
+            showSlide(slideIndex);
+
+        function nextslide(n){
+            showSlide(slideIndex += n);
+        }
+
+        function dotslide(n){
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            var i;
+            var slides = document.getElementsByClassName("imgslide");
+            var dot = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                
+                dot[i].className = dot[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            dot[slideIndex - 1].className += " active";
+            
+        }
+        var tambah = document.getElementById('tambah');
+              var kurang = document.getElementById('kurang');
+              var hasil = document.getElementById('hasil');
+              var no = 1;
+              tambah.onclick = function(){
+              hasil.innerHTML = no++;
+              }
+              kurang.onclick = function(){
+              hasil.innerHTML = no--;
+            }
+    </script>
+
+    
+
+     
+
+
+    <div class="footer">
+      <div class="footer-logo"><img src="./img/logo.png" alt=""></div>
+      <div class="footer-nav">
+        <ul>
+          <li class="judul">Location</li>
+          <li>Jl. Sumur Bandung No.7 Lebak Siliwangi,<br>Coblong Kota Bandung,<br>Jawa Barat 40132</li>
+          <li>Tel: +62 (022) 2518998<br>Email: abekastaycation@gmail.com</li>
+        </ul>
+      </div>  
+      <div class="footer-nav">
+        <ul>
+          <li class="judul">Follow</li>
+          <li><a  class="social" href=""><span class="fab fa-facebook"></span></a></i> Facebook</li>
+          <li><a  class="social" href=""><span class="fab fa-twitter"></span></a></i> Twitter</li>
+          <li><a  class="social" href=""><span class="fab fa-instagram"></span></a></i> Instagram</li>
+        </ul>
+      </div> 
+      <div class="footer-nav">
+        <ul>
+          <li class="judul">Connect Us</li>
+          <li>abekastaycation@gmail.com</li>
+          <li>069-69-6969-69</li>
+          <li>Staycation, Bandung, Jakarta</li>
+        </ul>
+      </div>
+   </div>
+  
+
+</body>
+</html>

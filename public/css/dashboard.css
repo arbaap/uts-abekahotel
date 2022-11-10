@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  quotes: none;
+  text-decoration: unset;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: 0px auto;
+  overflow-x: hidden;
+
+}
+
+
+.lesson-wrapper {
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  color: #152c5b;
+  font-weight: bold;
+
+}
+
+.mainscreen
+{
+    background-color: #ffffff;
+    color: #152C5B;
+    padding: 20px 40px;
+}
+
+.dashboard {
+
+    background: white;
+    position:center;
+    top: 50rem;
+    border-radius: 1.5rem;
+    box-shadow: 4px 3px 20px #3535358c;
+    text-align: left;
+    
+}
+
+.dashboard h1 {
+  text-align: center;
+  border-bottom: 2px solid #F2994A;
+  width: 100%;
+  margin-bottom:40px ;
+  
+}
+
+.dashboard p {
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  
+  
+}
+
+
+.night {
+  color: #615a5a;
+}
+
+.dashboard {
+    background-color: #ffffff;
+	  border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 20px 40px;
+}
+
+.inputbox
+{
+    color:#030303;
+	  width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline:none;
+}
+
+
+.button{
+    cursor: pointer;
+    background-color: #219653;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    width:100%;
+    letter-spacing: .11rem;
+    outline:none;
+}
+
+.button:hover
+{
+	transform: scale(1.05) translateY(-3px);
+    box-shadow: 3px 3px 6px #38373785;
+}
+
+.continue {
+  background-color: #152C5B;
+}
+
