@@ -14,7 +14,18 @@
   font-weight: bold;
 
 }
+.namapage{
+  margin-left: 120px;
+  margin-top: 80px;
+  color: #808080;
+  cursor: pointer;
+}
 
+.namapage p{
+  float: left;
+  margin-left: 10px;
+  color: red;
+}
 
 /* boking informations */
 

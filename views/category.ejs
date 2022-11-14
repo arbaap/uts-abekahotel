@@ -56,22 +56,23 @@
       <div class="desc">
           <h3 class="section-tittle">Category</h3>
       </div>
+      <% rooms.forEach((roomss,index) =>{%>
       <div class="catdetails">
         <div class="kirisatu">
-          <% for (let i=0; i < rooms.length; i++){%>
+          
           <img src="./img/1.png" href="#">
           
-          <p class="harga"><%= rooms[i].nama_rooms%> <br> Tonight's Rate :<strong> Rp. <%= rooms[i].harga_rooms%></strong> </p>
+          <p class="harga"><%= roomss.nama_rooms%> <br> Tonight's Rate :<strong> Rp. <%= roomss.harga_rooms%></strong> </p>
           <a href="/rooms#standartwin"><button href="#" class="btncat">Details</button></a></div>
-          <% }%>
+          
         </div>
         <div class="kanansatu">
           <img src="./img/7.png">
-          <p class="harga">Standar Double <br> Tonight's Rate :<strong> Rp. 450.000</strong> </p>
+          <p class="harga"><%= roomss.nama_rooms%> <br> Tonight's Rate :<strong> Rp. <%= roomss.harga_rooms%></strong> </p>
           <a href="/rooms#standardouble"><button href="#" class="btncate">Details</button></a></div>
         </div>
 
-      
+      <% })%>
         <div class="kiridua">
           <img src="./img/10.png">
           <p class="harga">Deluxe <br> Tonight's Rate :<strong> Check Avaliability</strong> </p>

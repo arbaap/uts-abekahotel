@@ -20,7 +20,7 @@
         <ul class="nav-menu">
           <li> <a href="/admin" class="nav-link">Kategori</a> </li>
           <li> <a href="/adminbooking" class="nav-link">Data Pengunjung</a> </li>
-          <li> <a href="/" class="nav-link">Rating</a> </li>
+          <li> <a href="/adminkamar" class="nav-link">Rating</a> </li>
         </ul>
       </nav>
     </div>
@@ -76,6 +76,41 @@
     </div>
     </div>
   </div>
+
+  <div class="card border-0 shadow rounded">
+    <div class="card-body">
+      <h1 class="pengunjung">Data Pembayaran</h1>
+        <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th scope="col">ID_Booking</th>
+          <th scope="col">Nama Pengirim</th>
+          <th scope="col">Asal Bank</th>
+          <th scope="col">Bukti Pembayaran</th>
+          <th scope="col">AKSI</th>
+          </tr>
+        </thead>
+      <tbody>
+        <% for (let i=0; i < payment.length; i++){%>
+        <tr>
+            <th scope="row" class="text-center"><%= payment[i].id_payment%></th>
+            <td><%= payment[i].nama_pengirim%></td>
+            <td><%= payment[i].asal_bank%></td>
+            <td> -- Gambar --</td>
+
+            
+            <td class="text-center">
+                <a onclick="return alert('Approve Pembayaran Success')" href="" class="btn btn-sm btn-success">APPROVE</a>
+                <a onclick="return alert('Reject Pembayaran Sucess')" href="" class="btn btn-sm btn-danger">REJECT</a>
+            </td>
+            </tr> 
+        <% }%>
+
+      </tbody>
+      </table>  
+      </div>
+    </div>
+    </div>
   </div>
 
   

@@ -20,7 +20,7 @@
         <ul class="nav-menu">
           <li> <a href="/admin" class="nav-link">Kategori</a> </li>
           <li> <a href="/adminbooking" class="nav-link">Data Pengunjung</a> </li>
-          <li> <a href="/" class="nav-link">Rating</a> </li>
+          <li> <a href="/adminkamar" class="nav-link">Rating</a> </li>
         </ul>
       </nav>
     </div>
@@ -61,7 +61,7 @@
             <td><%= rooms[i].harga_rooms%></td>
             <td> = Gambar</td>
             <td class="text-center">
-                <a onclick="return alert('Are You sure?')" href="" class="btn btn-sm btn-danger">HAPUS</a>
+                 <a onclick="return alert('Are You sure?')" href="/adminkamar/<%=rooms[i].id_rooms%>" class="btn btn-sm btn-danger">HAPUS</a>
                  <td class="text-center">
             </td>
         </tr>

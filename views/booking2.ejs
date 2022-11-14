@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/booking2.css">
   <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <title>Booking 2</title>
 </head>
@@ -28,7 +29,14 @@
       </nav>
     </div>
   </header>
-  
+  <div class="namapage">
+      <p  onclick="kembali()" class="fas fa-arrow-alt-circle-left"> Kembali</p> 
+        <script>
+            function kembali() {
+                window.history.back();
+            }
+        </script>
+  </div>
   <div class="lesson-wrapper">
       <div class="container">
         <div class="heading">
@@ -56,19 +64,14 @@
         </div>
         
         <div class="rightside">
-          <form action="">
+          <form action="/upload-pembayaran" method="post">
             <h1>Payment</h1>
             <p>Upload Bukti Transfer</p>
-            <input type="file" class="inputbox" name="name" required />
-            <p>Asal Bank</p>
-             <select class="inputbox" name="card_type" id="card_type" required>
-              <option value="">--Pilih Bank--</option>
-              <option value="">BCA</option>
-              <option value="">Mandiri</option>
-              <option value="">Dana</option>
-            </select>
+            <input type="file" class="inputbox" name="gambar" required />
             <p>Nama Pengirim</p>
-            <input type="text" class="inputbox" name="card_number" id="card_number" required />
+            <input type="text" class="inputbox" name="nama_pengirim"  required />
+            <p>Asal Bank</p>
+            <input type="text" class="inputbox" name="asal_bank" placeholder="BCA/MANDIRI/DANA" required />
             <button type="submit" class="button">Submit</button>
             
           </form>

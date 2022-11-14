@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/succes.css">
   <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <title>Success</title>
 </head>
@@ -28,7 +29,14 @@
       </nav>
     </div>
   </header>
-  
+  <div class="namapage">
+      <p  onclick="kembali()" class="fas fa-arrow-alt-circle-left"> Kembali</p> 
+        <script>
+            function kembali() {
+                window.history.back();
+            }
+        </script>
+  </div>
   <div class="lesson-wrapper">
       <div class="container">
         <div class="heading">
@@ -36,26 +44,26 @@
         </div>
         
     <div class="mainscreen">
-      <div class="card">
-        <div class="leftside">
-          <a> <img class="product" src="./img/ceklis.png" alt=""></a>>
-        </div>
-        
-        <div class="rightside" id="payment">
+      <div class="card"> 
+        <div class="success" id="payment">
+           <% booking.forEach((bookings,index) =>{%>
           <form action="">
             <h1>Payment Sucessfull</h1>
             <p>First Name</p>
-            <input type="text" class="inputbox" placeholder="Fer D"/>
+            <p  class="isibooking"><%= bookings.nama_booking%></p>
             <p>Address</p>
-            <input type="text" class="inputbox"  id="card_number" placeholder="UIN BANDUNG"/>
+            <p  class="isibooking"><%= bookings.alamat_booking%></p>
             <p>Email Address</p>
-            <input type="text" class="inputbox"  id="card_number" placeholder="dSams@gmail.com" />
+            <p  class="isibooking"><%= bookings.email_booking%></p>
             <p>Phone Number</p>
-            <input type="number" class="inputbox"  id="card_number" placeholder="088923121xx"/>
+            <p  class="isibooking"><%= bookings.notelp_booking%></p>
+            <p>Jumlah Hari Menginap</p>
+            <p  class="isibooking"><%= bookings.jumlah_hari%></p>
             <p>Bukti Pembayaran</p>
-            <input type="text" class="inputbox" />
+            <p  class="isibooking"> == GAMBAR BUKTI PEMBAYARAN</p>
             <p></p>
           </form>
+          <% })%>
         </div>
       </div>
       <button class="button" onclick="succes()">Selesai</button>
@@ -64,6 +72,8 @@
             swal("Pembayaran Berhasil", "Terimakasih Telah Menginap di Abeka Hotel", "success"); 
             } 
           </script>
+          <input type="button" value="Cetak Tiket Booking" class="button print"
+               onclick="window.print()" />
       </div>
       
          

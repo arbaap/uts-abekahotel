@@ -92,11 +92,11 @@ app.get("/dashboard",function(req,res){
     res.redirect("/loginadmin")
   }
 })
-// login
 
 
 
-// login users belom buat
+
+//kategori
 
 app.get("/admin",function(req,res){
   if(req.session.admin) {
@@ -111,7 +111,6 @@ app.get("/admin",function(req,res){
 })
 
 
-// kelola kategori kamar
 
 app.get("/adminkategori",function(req,res){
   if(req.session.admin) {
@@ -182,14 +181,18 @@ app.post('/update-edit/:id_kategori',encoder, (req,res)=>{
 app.get("/adminbooking",function(req,res){
   if(req.session.admin) {
     res.locals.admin = req.session.admin
-    connection.query('SELECT * FROM booking',(err,rows)=>{
-    if(err) throw err;``
-    res.render('adminbooking.ejs',{booking:rows});
-  })
+    connection.query('SELECT * FROM booking',(err,rows1)=>{
+    if(err) throw err;
+    connection.query('SELECT * FROM payment',(err,rows2)=>{
+    if(err) throw err;
+    res.render('adminbooking.ejs',{booking:rows1, payment:rows2});
+  })})
   } else {
     res.redirect("/loginadmin")
   }
 })
+
+
 
 
 // user
@@ -208,7 +211,16 @@ app.post('/tambah-databooking',encoder, (req,res)=>{
 })
 
 
+app.post('/upload-pembayaran',encoder, (req,res)=>{
+    let nama_pengirim = req.body.nama_pengirim
+    let asal_bank = req.body.asal_bank
+    connection.query(`INSERT INTO payment(nama_pengirim,asal_bank) VALUES ('${nama_pengirim}','${asal_bank}')`, (err,results)=>{
+        if(err) throw err;
+        res.redirect("/booking2")
+    })
+})
 
+//
 
 //delete
 app.get('/admin/:id_kategori',(req,res)=>{
@@ -223,6 +235,11 @@ app.get('/adminbooking/:id_booking',(req,res)=>{
     })
 })
 
+app.get('/adminkamar/:id_rooms',(req,res)=>{
+    connection.query(`DELETE FROM rooms where id_rooms ='${req.params.id_rooms}'`,(req,rows)=>{
+        res.redirect("/adminkamar");
+    })
+})
 
 // kamar
 
@@ -252,9 +269,10 @@ app.get("/kelolakamar",function(req,res){
 app.post('/kelolakamar',encoder, (req,res)=>{
   if(req.session.admin) {
     res.locals.admin = req.session.admin
+    let id_rooms = req.body.id_rooms
     let nama_rooms = req.body.nama_rooms
     let harga_rooms = req.body.harga_rooms
-    connection.query(`INSERT INTO rooms(nama_rooms,harga_rooms) VALUES ('${nama_rooms}','${harga_rooms}')`, (err,results)=>{
+    connection.query(`INSERT INTO rooms(id_rooms,nama_rooms,harga_rooms) VALUES ('${id_rooms}','${nama_rooms}','${harga_rooms}')`, (err,results)=>{
       if(err) throw err;
       res.redirect("/adminkamar")
     });
@@ -267,6 +285,16 @@ app.get('/category',(req,res)=>{
   connection.query('SELECT * FROM rooms',(err,rows)=>{
     if(err) throw err;
     res.render('category.ejs',{rooms:rows});
+  })
+})
+
+
+//succes booking
+
+app.get('/success',(req,res)=>{
+  connection.query('SELECT * FROM booking',(err,rows)=>{
+    if(err) throw err;
+    res.render('success.ejs',{booking:rows});
   })
 })
 
@@ -321,6 +349,7 @@ app.get('/editkategori', (req, res)=>{
 app.get('/loginadmin', (req, res)=>{
   res.render('loginadmin.ejs')
 })
+
 
 
 // listen
