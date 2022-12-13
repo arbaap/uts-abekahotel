@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Nov 2022 pada 06.42
+-- Waktu pembuatan: 27 Nov 2022 pada 12.19
 -- Versi server: 10.4.16-MariaDB
 -- Versi PHP: 7.4.12
 
@@ -59,6 +59,13 @@ CREATE TABLE `booking` (
   `jumlah_hari` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `booking`
+--
+
+INSERT INTO `booking` (`id_booking`, `nama_booking`, `alamat_booking`, `email_booking`, `notelp_booking`, `jumlah_hari`) VALUES
+(1, 'Arba Adhy', 'Pasirjati', 'arbaadhy@gmail.com', '088217822231', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -71,6 +78,25 @@ CREATE TABLE `kategori` (
   `nama_kamar` varchar(255) NOT NULL,
   `harga_kamar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `payment`
+--
+
+CREATE TABLE `payment` (
+  `id_payment` int(11) NOT NULL,
+  `nama_pengirim` varchar(255) NOT NULL,
+  `asal_bank` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `payment`
+--
+
+INSERT INTO `payment` (`id_payment`, `nama_pengirim`, `asal_bank`) VALUES
+(1, 'Arbaap', 'BCA');
 
 -- --------------------------------------------------------
 
@@ -107,6 +133,12 @@ ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
+-- Indeks untuk tabel `payment`
+--
+ALTER TABLE `payment`
+  ADD PRIMARY KEY (`id_payment`);
+
+--
 -- Indeks untuk tabel `rooms`
 --
 ALTER TABLE `rooms`
@@ -126,19 +158,19 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT untuk tabel `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id_booking` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_booking` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `rooms`
+-- AUTO_INCREMENT untuk tabel `payment`
 --
-ALTER TABLE `rooms`
-  MODIFY `id_rooms` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `payment`
+  MODIFY `id_payment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
