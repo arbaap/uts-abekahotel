@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         
   <title>Category</title>
 </head>
@@ -42,56 +43,40 @@
                 window.history.back();
             }
         </script>
-  </div>
-        <div class="kelola">
-          <img src="./img/kelola.jpg">
-          <h1 class="textjudul">Welcome To</h1>
-          <h2 class="textjudul">Abeka <br> Hotel's</h2>
-          <a href="#category"><button class="btn1">Show Me Now</button></a>
-        </div>
       </section>
       
-      <br><br><br>
-      
-      <div class="desc">
-          <h3 class="section-tittle">Category</h3>
-      </div>
+
       <% rooms.forEach((roomss,index) =>{%>
-      <div class="catdetails">
+      <div class="desc">
+          <h3 id="standartwin" class="section-tittle"><%= roomss.nama_rooms %></h3>
+          <p class="asssd"><b>Nama Kamar</b> : <%= roomss.nama_rooms%></p>
+          <p class="asssd"><b>Harga Kamar</b> : Rp. <%= roomss.harga_rooms%></p>
+          
+          <div class="catdetails">
         <div class="kirisatu">
-          
-          <img src="./img/1.png" href="#">
-          
-          <p class="harga"><%= roomss.nama_rooms%> <br> Tonight's Rate :<strong> Rp. <%= roomss.harga_rooms%></strong> </p>
-          <a href="/rooms#standartwin"><button href="#" class="btncat">Details</button></a></div>
-          
+          <img src="<%= roomss.image_rooms %>" href="#">
+          <p>Available Now</p>
+     
+           
         </div>
         <div class="kanansatu">
-          <img src="./img/7.png">
-          <p class="harga"><%= roomss.nama_rooms%> <br> Tonight's Rate :<strong> Rp. <%= roomss.harga_rooms%></strong> </p>
-          <a href="/rooms#standardouble"><button href="#" class="btncate">Details</button></a></div>
-        </div>
-
-      <% })%>
-        <div class="kiridua">
-          <img src="./img/10.png">
-          <p class="harga">Deluxe <br> Tonight's Rate :<strong> Check Avaliability</strong> </p>
-          <a href="/rooms#deluxe"><button href="#" class="btncat">Details</button></a></div>
-        </div>
-        <div class="kanandua" id="category">
-          <img src="./img/7.png">
-          <p class="harga">Family <br> Tonight's Rate :<strong> Rp. 850.000</strong> </p>
-          <a href="/rooms#family"><button href="#" class="btncat">Details</button></a></div>
-        </div>
-      
-
-      
-        <div class="tigatengah">
-          <img src="./img/9.png">
-          <p class="harga">Family Deluxe<br> Tonight's Rate :<strong> Rp. 900.000</strong> </p>
-          <a href="/rooms#deluxe"><button href="#" class="btncat">Details</button></a></div>
+          <img src="<%= roomss.image_rooms %>">
+          <p>ROOM FEATURES</p>
+          <ul>
+            <li>1. Air Conditioning</li>
+            <li>2. Television</li>
+            <li>3. In-room-safe</li>
+            <li>4. Ironing Facility</li>
+            <li>5. Complimentary bottled water</li>
+            <li>6. Desk</li>
+            <li>7. Blackout drapes / curtanis</li>
+          </ul>
         </div>
       </div>
+      <% })%>
+ 
+     
+       
       
       
       <br><br><br>

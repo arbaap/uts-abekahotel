@@ -279,8 +279,9 @@ app.post("/kelolakamar", encoder, (req, res) => {
     let id_rooms = req.body.id_rooms;
     let nama_rooms = req.body.nama_rooms;
     let harga_rooms = req.body.harga_rooms;
+    let image_rooms = req.body.image_rooms;
     connection.query(
-      `INSERT INTO rooms(id_rooms,nama_rooms,harga_rooms) VALUES ('${id_rooms}','${nama_rooms}','${harga_rooms}')`,
+      `INSERT INTO rooms(id_rooms,nama_rooms,harga_rooms,image_rooms) VALUES ('${id_rooms}','${nama_rooms}','${harga_rooms}','${image_rooms}')`,
       (err, results) => {
         if (err) throw err;
         res.redirect("/adminkamar");
@@ -295,6 +296,13 @@ app.get("/category", (req, res) => {
   connection.query("SELECT * FROM rooms", (err, rows) => {
     if (err) throw err;
     res.render("category.ejs", { rooms: rows });
+  });
+});
+
+app.get("/rooms", (req, res) => {
+  connection.query("SELECT * FROM rooms", (err, rows) => {
+    if (err) throw err;
+    res.render("rooms.ejs", { rooms: rows });
   });
 });
 

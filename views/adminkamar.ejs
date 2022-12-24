@@ -59,7 +59,7 @@
             <th scope="row" class="text-center"><%= rooms[i].id_rooms%></th>
             <td><%= rooms[i].nama_rooms%></td>
             <td><%= rooms[i].harga_rooms%></td>
-            <td> = Gambar</td>
+            <td><img src="<%= rooms[i].image_rooms %> " class="card-img-top" style="width: 12rem;" alt=""></td>
             <td class="text-center">
                  <a onclick="return alert('Are You sure?')" href="/adminkamar/<%=rooms[i].id_rooms%>" class="btn btn-sm btn-danger">HAPUS</a>
                  <td class="text-center">

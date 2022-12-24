@@ -54,18 +54,19 @@
       
       <br><br><br>
       
+      <% rooms.forEach((roomss,index) =>{%>
       <div class="desc">
-          <h3 id="standartwin" class="section-tittle">Standar Twin</h3>
-
-      <div class="catdetails">
-        <div class="kirisatu">
-          <img src="./img/11.png" href="#">
-          <p>Available Now</p>
-          <a href="/detail1"><button class="btncategory">BOOK NOW</button></a>
+          <h3 id="standartwin" class="section-tittle"><%= roomss.nama_rooms %></h3>
           
+          <div class="catdetails">
+        <div class="kirisatu">
+          <img src="<%= roomss.image_rooms %>" href="#">
+          <p>Available Now</p>
+          <a href="/booking1"><button class="btncategory">BOOK NOW</button></a>
+           
         </div>
         <div class="kanansatu">
-          <img src="./img/5.png">
+          <img src="<%= roomss.image_rooms %>">
           <p>ROOM FEATURES</p>
           <ul>
             <li>1. Air Conditioning</li>
@@ -78,8 +79,9 @@
           </ul>
         </div>
       </div>
+      <% })%>
 
-
+<!-- 
       <div class="desc">
           <h3 id="standardouble"class="section-tittle">Standar Double</h3>
 
@@ -167,7 +169,7 @@
       </div>
     <div class="desc">
           <h3 class="section-tittle">Abeka Hotel Rooms</h3>
-      </div>
+      </div> -->
 
     <div class="footer">
     <div class="footer-logo"><img src="./img/logo.png" alt=""></div>
