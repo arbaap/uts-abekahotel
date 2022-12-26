@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Nov 2022 pada 12.19
+-- Waktu pembuatan: 26 Des 2022 pada 10.03
 -- Versi server: 10.4.16-MariaDB
 -- Versi PHP: 7.4.12
 
@@ -64,7 +64,8 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`id_booking`, `nama_booking`, `alamat_booking`, `email_booking`, `notelp_booking`, `jumlah_hari`) VALUES
-(1, 'Arba Adhy', 'Pasirjati', 'arbaadhy@gmail.com', '088217822231', 2);
+(4, 'ada', 'bandung', 'arba@gmail.com', '801321321', 2),
+(5, 'Mahran', 'Cipadung', 'mahran@gmail.com', '123123', 2);
 
 -- --------------------------------------------------------
 
@@ -78,6 +79,14 @@ CREATE TABLE `kategori` (
   `nama_kamar` varchar(255) NOT NULL,
   `harga_kamar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `nama_kamar`, `harga_kamar`) VALUES
+(1, 'Family', 'Family Room', '450.000'),
+(2, 'Deluxe', 'Deluxe Room', '450.000');
 
 -- --------------------------------------------------------
 
@@ -107,8 +116,17 @@ INSERT INTO `payment` (`id_payment`, `nama_pengirim`, `asal_bank`) VALUES
 CREATE TABLE `rooms` (
   `id_rooms` int(11) NOT NULL,
   `nama_rooms` varchar(255) NOT NULL,
-  `harga_rooms` varchar(255) NOT NULL
+  `harga_rooms` varchar(255) NOT NULL,
+  `image_rooms` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `rooms`
+--
+
+INSERT INTO `rooms` (`id_rooms`, `nama_rooms`, `harga_rooms`, `image_rooms`) VALUES
+(1, 'Oyo', '450.000', 'https://images.oyoroomscdn.com/uploads/hotel_image/18776/large/f2791b1d02149850.jpg'),
+(2, 'Ayo', '500.000', 'https://images.oyoroomscdn.com/uploads/hotel_image/18776/large/f3425b15eb214aa3.jpg');
 
 --
 -- Indexes for dumped tables
@@ -139,12 +157,6 @@ ALTER TABLE `payment`
   ADD PRIMARY KEY (`id_payment`);
 
 --
--- Indeks untuk tabel `rooms`
---
-ALTER TABLE `rooms`
-  ADD PRIMARY KEY (`id_rooms`);
-
---
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -158,13 +170,13 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT untuk tabel `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id_booking` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_booking` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `payment`
